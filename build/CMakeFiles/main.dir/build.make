@@ -60,7 +60,7 @@ include CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afterburner/CLionProjects/cv_window_interactions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
-	$(CMAKE_COMMAND) -E __run_co_compile --iwyu=/usr/local/bin/include-what-you-use --tidy="/usr/bin/clang-tidy;-checks=*" --cppcheck=/usr/bin/cppcheck --source=/home/afterburner/CLionProjects/cv_window_interactions/main.cpp -- /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/afterburner/CLionProjects/cv_window_interactions/main.cpp
+	$(CMAKE_COMMAND) -E __run_co_compile --iwyu=/usr/local/bin/include-what-you-use --tidy="/usr/bin/clang-tidy;-checks=*;-fix" --cppcheck=/usr/bin/cppcheck --source=/home/afterburner/CLionProjects/cv_window_interactions/main.cpp -- /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/afterburner/CLionProjects/cv_window_interactions/main.cpp
 
 CMakeFiles/main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"

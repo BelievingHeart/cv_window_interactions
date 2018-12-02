@@ -25,28 +25,31 @@ int main(int argc, const char *argv[]) {
         parser.printErrors();
     }
 
-// set mouse callback
+// set mouse callback Black
     cv::String Lena{"Lena"};
     cv::namedWindow(Lena, cv::WINDOW_GUI_EXPANDED);
     const auto mouse_callback = [](const int event, const int x, const int y, const int flags, void *userdata) {
         if (event != cv::EVENT_LBUTTONDOWN) { return; }
-        else {
-            draft = *static_cast<cv::Mat *>(userdata);
-            cv::circle(draft, cv::Point2i(x, y), 8, cv::Scalar(155, 100, 30), 2);
-        }
+
+        draft = (*static_cast<cv::Mat *>(userdata)).clone();
+        cv::circle(draft, cv::Point2i(x, y), 8, cv::Scalar(155, 100, 30), 2);
+
     };
     cv::setMouseCallback(Lena, mouse_callback, static_cast<void *>(&input_image));
 
 //    set trackbar
-//    int blurness = 0;
-    const auto on_change = [](const int pos, void *userdata){
-      if(!pos){
-          draft = *static_cast<cv::Mat *>(userdata);
-          cv::blur(draft, draft, cv::Size(pos, pos));
-      }
-    };
-    cv::createTrackbar("Blur size", Lena, nullptr, 11, on_change, static_cast<void *>(&input_image));
+    int blurness = 0;
+    const auto on_change = [](const int pos, void *userdata) {
+        if (pos != 0) {
+//          draft = *static_cast<cv::Mat *>(userdata);
+            draft = (*static_cast<cv::Mat *>(userdata)).clone();
 
+            cv::blur(draft, draft, cv::Size(pos, pos));
+        }
+    };
+    cv::createTrackbar("Blur size", Lena, &blurness, 11, on_change, static_cast<void *>(&input_image));
+
+    draft = input_image;
     while (cv::waitKey(30) != 27) {
         cv::imshow(Lena, draft);
     }

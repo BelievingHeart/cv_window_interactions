@@ -7,7 +7,7 @@ set(CMAKE_LINK_WHAT_YOU_USE TRUE)
 set(CMAKE_CXX_COMPILE_FEATURES  -Wall -Wextra -Wpedantic -Weffc++)
 
 find_program(TIDY "clang-tidy")
-set(CMAKE_CXX_CLANG_TIDY ${TIDY} "-checks=*")
+set(CMAKE_CXX_CLANG_TIDY ${TIDY} "-checks=*" "-fix")
 find_program(CPPCHECK cppcheck "--std=c++14")
 set(CMAKE_CXX_CPPCHECK ${CPPCHECK})
 find_program(IWYU include-what-you-use)
