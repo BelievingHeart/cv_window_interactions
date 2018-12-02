@@ -7,7 +7,11 @@
 #IncludeRegexTransform: 
 
 /home/afterburner/CLionProjects/cv_window_interactions/main.cpp
+jmorecfg.h
+-
 opencv2/core/cvstd.hpp
+-
+opencv2/core/hal/interface.h
 -
 opencv2/core/mat.hpp
 -
@@ -22,6 +26,8 @@ opencv2/highgui.hpp
 opencv2/imgcodecs.hpp
 -
 opencv2/imgproc.hpp
+-
+vector
 -
 
 /usr/local/include/opencv4/opencv2/calib3d.hpp
