@@ -1,0 +1,3 @@
+/home/afterburner/CLionProjects/cv_window_interactions/build/CMakeFiles/rebuild_cache.dir
+/home/afterburner/CLionProjects/cv_window_interactions/build/CMakeFiles/main.dir
+/home/afterburner/CLionProjects/cv_window_interactions/build/CMakeFiles/edit_cache.dir
