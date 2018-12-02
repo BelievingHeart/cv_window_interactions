@@ -58,6 +58,7 @@ int main(int argc, const char *argv[]) {
     input_image = cv::imread(parser.get<cv::String>("@image"), cv::IMREAD_ANYCOLOR);
     if (!parser.check()) {
         parser.printErrors();
+        return 0;
     }
 
     cv::namedWindow(Lena, cv::WINDOW_GUI_EXPANDED);
