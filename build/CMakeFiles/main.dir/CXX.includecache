@@ -13,6 +13,8 @@ opencv2/core/mat.hpp
 -
 opencv2/core/mat.inl.hpp
 -
+opencv2/core/types.hpp
+-
 opencv2/core/utility.hpp
 -
 opencv2/highgui.hpp
